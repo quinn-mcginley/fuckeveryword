@@ -44,7 +44,7 @@ def get_current_line(index):
 	with open("words.txt") as source_fh:
 		for i in range(index+1):
 			status_str = source_fh.readline().strip()
-		return "fuck " + status_str
+		return status_str
 
 class MainHandler(webapp2.RequestHandler):
 	def get(self):
@@ -108,7 +108,7 @@ class MakeHandler(webapp2.RequestHandler):
 
 class TestHandler(webapp2.RequestHandler):
 	def get(self):
-		tweet('fuck test')
+		tweet('apple+ test')
 
 		self.redirect('/')
 
